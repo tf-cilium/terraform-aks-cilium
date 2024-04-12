@@ -53,7 +53,6 @@ variable "aks" {
 variable "cilium" {
   description = "Feature of cilium"
   type = object({
-    type                   = string
     version                = optional(string, "1.14.3")
     kube-proxy-replacement = optional(bool, false)
     ebpf-hostrouting       = optional(bool, false)
@@ -64,7 +63,6 @@ variable "cilium" {
     upgrade-compatibility  = optional(string, null)
   })
   default = {
-    type                   = "cilium_custom" #other options: cilium_azure|byocni
     version                = "1.15.1"
     kube-proxy-replacement = false
     ebpf-hostrouting       = false
