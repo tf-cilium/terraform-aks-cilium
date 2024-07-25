@@ -63,7 +63,7 @@ variable "cilium" {
     upgrade-compatibility  = optional(string, null)
   })
   default = {
-    version                = "1.15.1"
+    version                = "1.16.0"
     kube-proxy-replacement = false
     ebpf-hostrouting       = false
     hubble                 = false
